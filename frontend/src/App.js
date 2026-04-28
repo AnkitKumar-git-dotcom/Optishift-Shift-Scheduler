@@ -10,7 +10,7 @@ function App() {
   const [schedule, setSchedule] = useState([]);
 
   useEffect(() => {
-    fetch("http://10.2.13.126:5000/api/metadata")
+    fetch("https://optishift-shift-scheduler.onrender.com/api/metadata")
       .then((res) => res.json())
       .then((json) => setData(json))
       .catch((err) => console.error(err));
@@ -42,7 +42,7 @@ function App() {
 
   const fetchSchedule = async () => {
     const res = await fetch(
-      `http://10.2.13.126:5000/api/schedule?employee=${employee}&department=${department}`
+      `https://optishift-shift-scheduler.onrender.com/api/schedule?employee=${employee}&department=${department}`
     );
     const result = await res.json();
     setSchedule(result);
