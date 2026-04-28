@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import image from "./image.png";
-// import Particles from "react-tsparticles";
+import Particles from "react-tsparticles";
 
 function App() {
   const [data, setData] = useState({});
@@ -92,7 +92,7 @@ function App() {
   return (
     <>
       {/* BACKGROUND */}
-      // <Particles options={particlesOptions} />
+      <Particles options={particlesOptions} />
 
       {/* LOGO */}
       <div className="taskbar">
